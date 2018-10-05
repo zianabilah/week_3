@@ -2,9 +2,8 @@ var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca
 
 
 function dataHandling2(biodata){
-  var provinsi="Provinsi "
-  provinsi+=biodata[2]
-  biodata.splice(2,1,provinsi)
+  biodata.splice(2,1,'provinsi Bandar Lampung')
+  biodata.push('Pria', 'SMA Internasional Metro')
   console.log(biodata);
 
   var tanggal=biodata[3].split("/")
@@ -25,8 +24,10 @@ function dataHandling2(biodata){
     case '12' : console.log('Desember'); break;
   }
   
-  // tanggal.sort();
-  // console.log(tanggal);
+ 
+  var tanggalBaru = tanggal.slice()
+  tanggalBaru.sort(function(a, b){return b-a});
+  console.log(tanggalBaru)
 
   tanggal=tanggal.join("-")
 console.log(tanggal)

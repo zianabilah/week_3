@@ -6,21 +6,21 @@ var input = [
             ]
 
 
-function dataHandling(input){
-  for(var i = 0 ; i< input.length ; i++){
-    for( var j = 0 ; j<input[i].length; j++)
-      if(j===0){
-        console.log('Nomor ID:', input[i][j]);
-      }else if(j===1){
-        console.log('Nama Lengkap:', input[i][j]);
-      }else if(j===2){
-        console.log('TTL:', input[i][j]);
-      }else{
-        console.log('Hobi', input[i][j]);
-      }
-  console.log(" ")
-  }
-  
-}
-
-dataHandling(input)
+            function dataHandling(input){
+              for(var i = 0 ; i< input.length ; i++){
+                for( var j = 0 ; j<input[i].length; j++)
+                  if(j===0){
+                    console.log('Nomor ID:', input[i][j]);
+                  }else if(j===1){
+                    console.log('Nama Lengkap:', input[i][j]);
+                  }else if(j===2){
+                    console.log('TTL:', input[i][j],input[i][j+1]);
+                  }else if (j===4){
+                    console.log('Hobi:', input[i][j]);
+                  }
+              console.log(" ")
+              }
+              
+            }
+            
+            dataHandling(input)
